@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BudgetBuddy - Savings Goals</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="transactions.html">Transactions</a></li>
+                <li><a href="goals.html" class="active">Goals</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Savings Goals</h1>
+        <section class="add-goal">
+            <h2>Add New Goal</h2>
+            <form id="goal-form">
+                <input type="text" id="goal-name" placeholder="Goal Name" required>
+                <input type="number" id="goal-amount" placeholder="Target Amount" step="0.01" required>
+                <input type="date" id="goal-date" required>
+                <button type="submit">Add Goal</button>
+            </form>
+        </section>
+        <section class="goals-list">
+            <h2>Your Goals</h2>
+            <div id="goals-container">
+                <!-- Goals will be dynamically added here -->
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 BudgetBuddy. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

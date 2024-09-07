@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BudgetBuddy - Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="dashboard.html" class="active">Dashboard</a></li>
+                <li><a href="transactions.html">Transactions</a></li>
+                <li><a href="goals.html">Goals</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Your Financial Dashboard</h1>
+        <section class="summary">
+            <div class="summary-item">
+                <h2>Total Balance</h2>
+                <p id="total-balance">$0.00</p>
+            </div>
+            <div class="summary-item">
+                <h2>Income</h2>
+                <p id="total-income">$0.00</p>
+            </div>
+            <div class="summary-item">
+                <h2>Expenses</h2>
+                <p id="total-expenses">$0.00</p>
+            </div>
+        </section>
+        <section class="charts">
+            <div class="chart-container">
+                <h2>Expense Breakdown</h2>
+                <canvas id="expense-chart"></canvas>
+            </div>
+            <div class="chart-container">
+                <h2>Income vs Expenses</h2>
+                <canvas id="income-expense-chart"></canvas>
+            </div>
+        </section>
+        <section class="quick-add">
+            <h2>Quick Add</h2>
+            <form id="transaction-form">
+                <input type="text" id="transaction-description" placeholder="Description" required>
+                <input type="number" id="transaction-amount" placeholder="Amount" step="0.01" required>
+                <select id="transaction-type" required>
+                    <option value="income">Income</option>
+                    <option value="expense">Expense</option>
+                </select>
+                <button type="submit">Add Transaction</button>
+            </form>
+        </section>
+    </main>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
